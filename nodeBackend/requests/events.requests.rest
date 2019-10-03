@@ -1,0 +1,28 @@
+GET http://localhost:3003/api/events
+
+###
+GET http://localhost:3003/api/events/5d8a0e81e23a6740384782af
+###
+// New person
+POST http://localhost:3003/api/events
+Content-Type: application/json
+
+{
+  "name": "Basketball game",
+  "type": "tournament",
+  "date": "Sat Oct 05 2019 18:00:00 GMT+0300 (Eastern European Summer Time)",
+  "totalCost": 2000,
+  "address": "Borgbacken 12",
+  "detail": "Food not included"
+}
+### Delete person
+DELETE http://localhost:3003/api/events/5d8a1fc47de0721f44fd19a9
+
+### Update Person
+PUT http://localhost:3003/api/events/5d8a0e81e23a6740384782af
+Content-Type: application/json
+
+{
+    "totalCost": 666666
+}
+###

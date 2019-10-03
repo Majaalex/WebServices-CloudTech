@@ -1,0 +1,29 @@
+GET http://localhost:3003/api/persons
+
+###
+GET http://localhost:3003/api/persons/5d8a11a1c18d6c3054d031b3
+
+###
+// New person
+POST http://localhost:3003/api/persons
+Content-Type: application/json
+
+{
+    "firstName": "Kalle",
+    "surName": "Anka",
+    "email": "email@email.com",
+    "phone": "51515151515"
+}
+
+### Delete person
+DELETE http://localhost:3003/api/persons/5d8a1c42ceb84909e8a89323
+
+### Update Person
+PUT http://localhost:3003/api/persons/5d8a11a1c18d6c3054d031b3
+Content-Type: application/json
+
+{
+  "firstName": "Alllle",
+    "phone": "1231231231231"
+}
+###
