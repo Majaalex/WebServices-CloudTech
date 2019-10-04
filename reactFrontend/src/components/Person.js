@@ -41,15 +41,19 @@ const Event = (props) => {
           phone: phoneValue,
         })
       })
+      window.alert("You have updated this person.")
     } catch (e) {
       console.log('Error: ', e)
     }
-    window.alert("You have updated this person.")
   }
 
   const deleteEntry = () => {
     const confirmPrompt = "Do you want to delete this person from the database?"
-    if (window.confirm(confirmPrompt)) data.remove(personsUrl)
+    if (window.confirm(confirmPrompt)) {
+      data.remove(personsUrl)
+      data.remove("http://localhost:5000/api/Person/" + props.id)
+      window.alert("You have successfully deleted everything related to this person.")
+    }
   }
 
   if (personData) {

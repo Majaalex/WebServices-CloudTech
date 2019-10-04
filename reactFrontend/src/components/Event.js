@@ -55,10 +55,11 @@ const Event = (props) => {
           detail: detailValue
         })
       })
+      window.alert("You have updated this event.")
     } catch (e) {
       console.log('Error: ', e)
     }
-    window.alert("You have updated this event.")
+
   }
 
   const deleteEntry = () => {

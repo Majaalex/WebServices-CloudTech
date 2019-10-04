@@ -55,6 +55,7 @@ const NewRegistration = () => {
       } catch (e) {
         console.log('Error: ', e)
       }
+      window.alert('A new registration has been made.')
     }
     return (
       <div>

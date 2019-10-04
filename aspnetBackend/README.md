@@ -32,7 +32,7 @@ localhost:5000/api/person
 
 localhost:5000/api/registration
 
-optional id=[String] for registrations
+optional id=[int] for registrations
 
 localhost:5000/api/registration/id
 
@@ -49,7 +49,7 @@ Event: [String]
 
 localhost:5000/api/registration/id
 
-id = [String], required
+id = [int], required
 
 ``` c#
 Person: [String]
@@ -59,5 +59,11 @@ Event: [String]
 #### DELETE
 
 localhost:5000/api/registration/id
+
+id = [int], required
+
+**A DELETE request to the following api will delete ALL registrations for that specific person** and takes in the longer string id from the node backend.
+
+localhost:5000/api/person/id
 
 id = [String], required
