@@ -28,10 +28,10 @@ namespace aspnetBackend {
             services.AddCors(opt => {
                 opt.AddPolicy(MyAllowAny,
                     builder => {
-                        builder.WithOrigins("http://localhost:3000/new");
                         builder.AllowAnyOrigin();
                         builder.AllowAnyMethod();
                         builder.AllowAnyHeader();
+                        builder.AllowCredentials();
                     });
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
