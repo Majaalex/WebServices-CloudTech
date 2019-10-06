@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 namespace aspnetBackend.Models {
     public class Registration {
         public int Id;
-        public string firstName;
-        public string surName;
-        public string EventName;
-        public string EventDate;
+        public string firstName { get; set; }
+        public string surName { get; set; }
+        public string EventName { get; set; }
+        public string EventDate { get; set; }
     }
 }

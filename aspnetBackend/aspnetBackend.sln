@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29215.179
+VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aspnetBackend", "REST_Shop\aspnetBackend.csproj", "{FCE48674-CE3A-4A3C-89C3-C351C5756D68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnetBackend", "aspnetBackend.csproj", "{A1E0D635-39C0-4156-A25B-30E4CCE6D0BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FCE48674-CE3A-4A3C-89C3-C351C5756D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FCE48674-CE3A-4A3C-89C3-C351C5756D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FCE48674-CE3A-4A3C-89C3-C351C5756D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FCE48674-CE3A-4A3C-89C3-C351C5756D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E0D635-39C0-4156-A25B-30E4CCE6D0BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E0D635-39C0-4156-A25B-30E4CCE6D0BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E0D635-39C0-4156-A25B-30E4CCE6D0BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E0D635-39C0-4156-A25B-30E4CCE6D0BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5D2308E1-0416-4C51-B2CF-A7120E94BA3E}
+		SolutionGuid = {BF1B6D54-1C26-48C4-AE23-A2BC9DE4C8AD}
 	EndGlobalSection
 EndGlobal

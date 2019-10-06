@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace aspnetBackend.Models {
     public class PersonCost {
-        public string firstName;
-        public string surName;
-        public int totalCost;
+        public string firstName { get; set; }
+        public string surName { get; set; }
+        public int totalCost { get; set; }
     }
 }

@@ -8,10 +8,7 @@ using aspnetBackend.Models;
 using aspnetBackend.Resources;
 using System.Net;
 using System.Net.Http;
-using System.Web.Http.Filters;
-
 namespace aspnetBackend.Controllers {
-    [AllowCrossSiteJson]
     [Route("api/[controller]")]
     [ApiController]
     public class RegistrationController : ControllerBase {
@@ -49,14 +46,6 @@ namespace aspnetBackend.Controllers {
         public HttpResponseMessage Delete(int id) {
             RegistrationDb db = new RegistrationDb();
             return db.DeleteRegistration(id);
-        }
-    }
-    public class AllowCrossSiteJsonAttribute : ActionFilterAttribute {
-        public override void OnActionExecuted(HttpActionExecutedContext actionExecutedContext) {
-            if (actionExecutedContext.Response != null)
-                actionExecutedContext.Response.Headers.Add("Access-Control-Allow-Origin", "*");
-
-            base.OnActionExecuted(actionExecutedContext);
         }
     }
 }

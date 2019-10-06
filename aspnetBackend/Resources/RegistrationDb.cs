@@ -1,13 +1,10 @@
-﻿using Nancy.Json;
-using aspnetBackend.Models;
+﻿using aspnetBackend.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net;
-using Microsoft.Extensions.Configuration;
+using System.Data.SqlClient;
 
 namespace aspnetBackend.Resources
 {
@@ -18,7 +15,7 @@ namespace aspnetBackend.Resources
         public bool OpenConnection()
         {
             // Add MultipleActiveResultSets=true;
-            sqlConn = new SqlConnection("YourDBStringHere");
+            sqlConn = new SqlConnection("YourDBString");
             try
             {
                 sqlConn.Open();
@@ -311,7 +308,7 @@ namespace aspnetBackend.Resources
                     while (reader.Read())
                     {
                         EventObj eventInfo = await httpRequest.GetEvent(reader.GetString(0)).ConfigureAwait(false);
-                        int participants = await GetParticipants(eventInfo.id).ConfigureAwait(false);
+                        int participants = GetParticipants(eventInfo.id);
                         totalCost += (eventInfo.totalCost / participants);
                     }
                 }
@@ -324,7 +321,7 @@ namespace aspnetBackend.Resources
             return totalCost;
         }
 
-        public async Task<int> GetParticipants(string id)
+        public int GetParticipants(string id)
         {
             int participants = 0;
             if (OpenConnection() == true)

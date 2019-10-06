@@ -17,6 +17,7 @@ namespace aspnetBackend.Resources {
             HttpResponseMessage response = await client.GetAsync(uri).ConfigureAwait(false);
             var serializer = new JavaScriptSerializer();
             var content = response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine("Person:  " + content);
             var deserializedResult = serializer.Deserialize<EventObj>(content);
             return deserializedResult;
         }
@@ -26,6 +27,7 @@ namespace aspnetBackend.Resources {
             HttpResponseMessage response = await client.GetAsync(uri).ConfigureAwait(false);
             var serializer = new JavaScriptSerializer();
             var content = response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine("Event:  " + content);
             var deserializedResult = serializer.Deserialize<Person>(content);
             return deserializedResult;
         }

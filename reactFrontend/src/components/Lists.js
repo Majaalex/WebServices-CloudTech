@@ -7,7 +7,7 @@ const Lists = () => {
 
   useEffect(() => {
     const eventsUrl = "http://localhost:3003/api/events"
-    const personUrl = "http://localhost:5000/api/person"
+    const personUrl = "https://localhost:44381/api/person"
     axios.get(personUrl)
       .then(res => {
         setPersonData(res.data)

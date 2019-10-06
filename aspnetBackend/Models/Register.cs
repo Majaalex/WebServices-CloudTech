@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace aspnetBackend.Models {
     public class Register {
-        public string Person;
-        public string Event;
+        public string Person { get; set; }
+        public string Event { get; set; }
     }
 }
